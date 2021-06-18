@@ -8,21 +8,21 @@ using System;
 
 public class NestedClassesDemo : MonoBehaviour
 {
-    string playername = "Shirini";
-    int playerage = 22;
-    int playerscore = 100;
-    string playerlocation = "Hyd";
+    string playerName = "Deepika";
+    int playerAge = 22;
+    int playerScore = 100;
+    string playerLocation = "Andhra";
     [System.Serializable]
     private class DataDemo
     {
-        public string playername;
-        public int playerage;
-        public int playerscore;
-        public DataDemo(string playername, int playerage, int playerscore)
+        public string playerName;
+        public int playerAge;
+        public int playerScore;
+        public DataDemo(string playerName, int playerAge, int playerScore)
         {
-            this.playername = playername;
-            this.playerage = playerage;
-            this.playerscore = playerscore;
+            this.playerName = playerName;
+            this.playerAge = playerAge;
+            this.playerScore = playerScore;
         }
     }
 
@@ -47,7 +47,7 @@ public class NestedClassesDemo : MonoBehaviour
         string filepath = Application.persistentDataPath + "/NestedDemo.file";
         FileStream fs = new FileStream(filepath, FileMode.OpenOrCreate);
         BinaryFormatter bw = new BinaryFormatter();
-        DataDemo dm = new DataDemo(playername, playerage, playerscore);
+        DataDemo dm = new DataDemo(playerName, playerAge, playerScore);
         bw.Serialize(fs, dm);
         fs.Close();
 
@@ -60,11 +60,11 @@ public class NestedClassesDemo : MonoBehaviour
         BinaryFormatter bwr = new BinaryFormatter();
         FileStream fsm = new FileStream(filepath, FileMode.OpenOrCreate);
         DataDemo data = bwr.Deserialize(fsm) as DataDemo;
-        string name = data.playername;
-        int age = data.playerage;
-        int score = data.playerscore;
+        string name = data.playerName;
+        int age = data.playerAge;
+        int score = data.playerScore;
 
-        Debug.Log(("Player" + name + "age:" + age + "Score:" + score));
+        Debug.Log(("Player: " + name + " " + "Age: " + age + " " + "Score: " + score));
 
 
         //string test = data[playername] as string;

@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scripts/FloppyBirdAssets/Scenes/Game.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scripts/FloppyBirdAssets/Scenes/Menu.unity
+    guid: 4490ce20c81005f49ac41b702ec1c96c
+  - enabled: 1
+    path: Assets/Assets 1/Scenes/SampleScene.unity
+    guid: 4c850c6078657934688c7c62e416fa6d
+  - enabled: 1
+    path: Assets/Assets 1/Scenes/UI.unity
+    guid: 45ec6597a26f27f48bb145d93da41ec9
   m_configObjects: {}

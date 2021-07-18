@@ -9,7 +9,7 @@ using System;
 public class NestedClassesDemo : MonoBehaviour
 {
     string playerName = "Deepika";
-    int playerAge = 22;
+    int playerAge = 21;
     int playerScore = 100;
     string playerLocation = "Andhra";
     [System.Serializable]
@@ -25,9 +25,6 @@ public class NestedClassesDemo : MonoBehaviour
             this.playerScore = playerScore;
         }
     }
-
-
-
 
     // Update is called once per frame
     void Update()
@@ -50,8 +47,6 @@ public class NestedClassesDemo : MonoBehaviour
         DataDemo dm = new DataDemo(playerName, playerAge, playerScore);
         bw.Serialize(fs, dm);
         fs.Close();
-
-
     }
     void GetPlayerData()
     {
